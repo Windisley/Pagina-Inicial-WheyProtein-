@@ -1,6 +1,7 @@
 :root{
  --primary: #B1C548;
- --secundary: #CBEC21;
+ /* --secundary: #CBEC21; */
+ --secundary: #B5D024;
  --background: #EEF2D6;
  --black: #1B1E0A;
  --white: #F6F9EB;
@@ -19,6 +20,138 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: var(--background);
 }
+
+ h1,h2,p,button{
+    color: var(--black);
+ }
+
+.container{
+    width: 100%;
+    min-height: 100dvh;
+    margin: 0 auto;
+
+}
+
+.container main{
+    width: 98%;
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container main .box-content{
+    width: 100%;
+    height: 100%;
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.container main .box-content .box-promisse{
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 1rem;
+
+}
+
+.container main .box-content .box-promisse .title{
+ text-align: left;
+ text-transform: capitalize;
+ width: 100%;
+ 
+}
+
+.container main .box-content .box-promisse .title span{
+    color: var(--primary);
+    
+   }
+
+   .container main .box-content .box-promisse .promisse{
+    text-transform: capitalize;
+    text-align: left;
+    font-size: 1.2rem;
+    letter-spacing: .1px;
+   }
+
+   .container main .box-content .box-promisse .button{
+     width: 90%;
+     height: 40px;
+     font-weight: 600;
+     font-size: 1.1rem;
+     border-radius: 6px;
+     background-color: var(--primary);
+     border: 2px solid var(--black);
+     cursor: pointer;
+     text-transform: uppercase;
+     letter-spacing: .2px;
+     transition: .3s ease-in-out;
+ 
+   }
+
+   .container main .box-content .box-promisse .button:hover{
+    background-color: var(--secundary);
+   }
+
+   .container main .box-content .box-img{
+    width: 100%;
+    max-width: 500px;
+    height: 100%;
+    max-height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: wheyrigth 1.2s 1 ease;
+  
+   }
+
+   @keyframes wheyrigth{
+     0%{
+        transform: translate(100%);
+
+     }
+
+     100%{
+        transform: translate(0);
+     }
+
+   }
+
+   .container main .box-content .box-img img{
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     object-position: center center;
+    
+   }
+
+   @media screen and (width <= 760px) {
+    .container main{
+        padding: 1rem;
+    }
+    
+    .container main .box-content {
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+       
+    }
+   }
+
+
+
+
+
+
+
 
 
 
